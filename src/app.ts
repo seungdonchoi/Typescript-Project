@@ -116,6 +116,7 @@ class ProjectList {
 
   private renderProjects() {
     const listEl = document.getElementById(`${this.type}-projects-list`)! as HTMLUListElement
+    listEl.innerHTML = ''
     for (const prjItems of this.assignedProjects) {
       const listItem = document.createElement('li');
       listItem.textContent = prjItems.title
