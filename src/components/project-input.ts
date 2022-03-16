@@ -1,4 +1,8 @@
 /// <reference path="base-components.ts" />
+/// <reference path="../decorators/autobind.ts" />
+/// <reference path="../utility/validation.ts" />
+/// <reference path="../state/project-state.ts" />
+
 namespace App {
   export class ProjectInput extends Component<HTMLDivElement, HTMLFormElement> {
     titleInputElement: HTMLInputElement;
@@ -9,7 +13,7 @@ namespace App {
       super('project-input', 'app', true, 'user-input')
       this.titleInputElement = this.element.querySelector('#title') as HTMLInputElement;
       this.descriptionInputElement = this.element.querySelector('#description') as HTMLInputElement;
-      this.peopleInputElement = this.element.querySelector('#people') as HTMLInputElement;
+      this.peopleInputElement = this.element.querySelector('#people') as HTMLInputElement; 
 
       this.configure();
     }
